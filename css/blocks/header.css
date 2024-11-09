@@ -1,0 +1,243 @@
+.header {
+        /* padding-top: 64px; */
+        padding-top: clamp(30px, 0.357rem + 3.04vw, 64px);
+        padding-bottom: clamp(200px, -16.205rem + 57.41vw, 843px);
+        padding-bottom: clamp(7.5rem, -35.245rem + 97.7vw, 52.688rem);
+        /* padding-bottom: 843px; */
+    }
+
+header-category.header {
+    padding-top: 64px;
+    padding-bottom: 844px;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 198px;
+}
+
+.logo {
+    font-family: 'ChronicleDisplay', serif; 
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding: 0 15px;
+    font-size: 18px;
+}
+
+.nav-list {
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.78;
+    color: var(--text-color);
+    padding-bottom: 5px;
+    transition: color 0.2s ease-in;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.nav-link::after {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.nav-link:hover::after {
+    bottom: 0;
+    opacity: 1;
+}
+
+.account {
+    position: relative;
+    padding-left: 32px;
+    font-size: 17px; 
+    color: var(--text-color);   
+    transition: color 0.2s ease-in;
+}
+
+.account:hover {
+    color: var(--accent);   
+}
+
+.account:hover .account-svg {
+    fill: var(--accent);
+}
+
+.account-svg {
+    position: absolute;
+    display: block;
+    content: "";
+
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 24px;
+    height: 24px;
+    fill: var(--text-color);
+    transition: all 0.2s ease-in;
+    /* background-image: url("./../../img/icons/account.svg"); */
+}
+
+
+/* Кнопка навигации */
+/* .nav-button {
+    position: relative;
+    z-index: 99;
+
+    display: none;
+    height: 22px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+} */
+
+/* .nav-button-icon {
+    display: block;
+    position: relative;
+    width: 42px;
+    height: 4px;
+    background-color: var(--text-color);
+    border: none;
+}
+
+.nav-button-icon::before {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    top: -10px;
+
+    width: 42px;
+    height: 4px;
+
+    background-color: var(--text-color);
+}
+
+.nav-button-icon::after {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    bottom: -10px;
+
+    width: 42px;
+    height: 4px;
+
+    background-color: var(--text-color);
+} */
+
+/* .account::before {
+    position: absolute;
+    display: block;
+    content: "";
+
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 22px;
+    height: 22px;
+    background-image: url("./../../img/icons/account.svg");
+} */
+
+/*  HERO  */
+.hero {
+    /* display: flex; 
+    flex-direction: column;
+    gap: 32px; */
+    display: block;
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 15px;
+    color: var(--text-color);
+}
+
+.header-category {
+    margin-bottom: 32px;
+    text-shadow: 0px 0px 0.56em rgba(0, 0, 0, 0.6);
+}
+
+.hero-title {
+    font-family: var(--font-title);
+    font-size: 88px;
+    text-transform: capitalize;
+    line-height: 1.14;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+    margin-bottom: 32px;
+}
+
+.hero-scroll {
+    display: inline-block;
+    /* padding: 10px; */
+    padding-right: 32px;
+    position: relative;
+    font-size: 18px;
+    line-height: 1.22;
+    transition: color 0.2s ease-in;
+    /* transition: all 0.8s cubic-bezier(1.000, -0.600, 0.130, 1.610); */
+}
+
+.hero-scroll:hover {
+    color: var(--accent);
+}
+
+.hero-svg {
+    position: absolute;
+    /* display: block; */
+    content: "";
+
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 16px;
+    height: 24px;
+    fill: var(--text-color);
+    /* transition: all 0.2s ease-in; */
+    transition: all 1.2s cubic-bezier(1.000, -0.600, 0.130, 1.610);
+}
+
+/* .hero-scroll::after {
+    position: absolute;
+    display: block;
+    content: "";
+
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 16px;
+    height: 24px;
+    background-image: url("./../../img/icons/arrow_down.svg");
+} */
+
+.hero-scroll:hover .hero-svg {
+    color: var(--accent);
+    fill: var(--accent);
+    /* top: 40%; */
+    transform: translateY(1px);
+}

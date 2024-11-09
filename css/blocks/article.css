@@ -1,0 +1,97 @@
+.article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 65px;
+    margin-bottom: 200px;
+}
+
+.article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.article-content {
+    position: relative;
+    /* margin-right: 114px; */
+    padding-left: clamp(87px, 0.516rem + 9.84vw, 150px);
+    /* padding-left: 150px; 0.625 */
+    max-width: clamp(390px, -6.25rem + 61.25vw, 782px);
+    /* max-width: 782px; */
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.article-content::before {
+    position: absolute;
+    left: 0;
+    top: 0%;
+    transform: translateY(-43%);
+    content: attr(data-number);
+    display: block;
+    width: 1em;
+    height: 1em;
+    font-size: clamp(140px, 0.938rem + 15.63vw, 240px);
+    /* font-size: 240px; */
+    line-height: 1;
+    opacity: 0.1;
+}
+
+.article-category {
+    margin-bottom: 27px;
+}
+
+.article-category::before {
+    margin-right: 24px;
+    width: clamp(50px, 1.406rem + 3.44vw, 72px);
+    
+}
+
+.article-title {
+    max-width: 555px;
+    /* font-size: clamp(32px, -0.5rem + 5vw, 64px); */
+    font-size: clamp(44px, 1.188rem + 3.13vw, 64px);
+}
+
+.article-text {
+    font-size: 18px;
+    line-height: 1.78;
+}
+
+.article-read-more {
+    color: var(--accent);
+    align-self: flex-start;
+    display: inline-block;
+    padding-right: 40px;
+    position: relative;
+    font-size: 18px;
+    line-height: 1.22;
+    /* transition: color 0.2s ease-in;
+    transition: all 0.8s cubic-bezier(1.000, -0.600, 0.130, 1.610); */
+}
+
+.article-read-more-arrow {
+    position: absolute;
+    /* display: block; */
+
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    width: 24px;
+    height: 16px;
+    /* fill: var(--text-color); */
+    transition: all 0.3s ease-in;
+    /* transition: all 0.8s cubic-bezier(0.825, -0.600, 0.525, 1.420); */
+}
+
+.article-read-more:hover .article-read-more-arrow {
+    right: -3px;
+}
+
+.article-img {
+    display: block;
+    width: clamp(384px, 3.875rem + 35vw, 566px);
+    /* width: clamp(255px, -8.359rem + 48.59vw, 566px); */
+}

@@ -1,0 +1,89 @@
+.footer {
+    margin-bottom: clamp(10px, -9.688rem + 34.38vw, 120px);
+    /* margin-bottom: 120px; */
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 20px;
+}
+
+.footer-copyright-logo {
+        margin-bottom: 24px;
+}
+
+.footer-copyright-desc {
+    max-width: 303px;
+    font-size: 18px;
+    line-height: 1.78;
+}
+
+.footer-copyright-terms {
+    margin-top: auto;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 178%;
+    opacity: 0.5;
+}
+
+.footer-nav-wrapper {
+    max-width: 566px;
+    /* width: 566px; */
+    display: flex;
+    justify-content: space-between;
+    /* gap: 30px; */
+    column-gap: clamp(60px, -17.841rem + 34.55vw, 200px);
+    /* gap: 212px; */
+
+}
+
+.footer-nav {
+    max-width: 200px;
+}
+
+.footer-nav-title {
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--accent);
+}
+
+.footer-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-nav-list a {
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.78;
+    color: var(--text-color);
+    padding-bottom: 5px;
+}
+
+.footer-nav-list a::after {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.footer-nav-list a:hover::after {
+    bottom: 0;
+    opacity: 1;
+}
